@@ -8,9 +8,23 @@ from transformers import pipeline
 
 # Config :
 # To launch : streamlit run app.py
+# fail : 
+# classifier = pipeline("zero-shot-classification",model="shash2409/bert-finetuned-squad")
+# classifier = pipeline("zero-shot-classification",model="t5-small")
 
 # classifier = pipeline("zero-shot-classification",model="facebook/bart-large-mnli")
-classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-distilroberta-base")
+# classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-distilroberta-base")
+### classifier = pipeline("zero-shot-classification",model="tals/albert-xlarge-vitaminc-mnli")
+# classifier = pipeline("zero-shot-classification",model="finiteautomata/beto-sentiment-analysis")
+# classifier = pipeline("zero-shot-classification",model="MoritzLaurer/mDeBERTa-v3-base-mnli-xnli")
+
+
+# classifier = pipeline("zero-shot-classification",model="valhalla/distilbart-mnli-12-1")
+classifier = pipeline("zero-shot-classification",model="Narsil/deberta-large-mnli-zero-cls")
+
+
+
+
 
 
 st.set_page_config(
@@ -98,8 +112,8 @@ with st.spinner('The model is thinking very hard ...'):
     for i in range(len(answer['labels'])):
         label_probability_dict[answer['labels'][i]] = answer['scores'][i]
 
-    label_score_to_show = {k: v for k, v in label_probability_dict.items() if v > 0.3 }
-    # label_score_to_show = {k: str(np.floor(10000*float(v))/100.0 ) + '%' for k, v in label_probability_dict.items() if v > 0.3 }
+    # label_score_to_show = {k: v for k, v in label_probability_dict.items() if v > 0.3 }
+    label_score_to_show = {k: str(np.floor(10000*float(v))/100.0 ) + '%' for k, v in label_probability_dict.items() if v > 0.05 }
 
 label_score_to_show
 
