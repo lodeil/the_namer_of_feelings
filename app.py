@@ -51,54 +51,55 @@ with st.form(key="text_form"):
         submit_button = st.form_submit_button(label="💡 Get me the feelings !")
 
 
-if not submit_button:
-    st.stop()
+# if not submit_button:
+#     st.stop()
 
-st.title("🌌 Feelings :")
-st.header("")
+# st.title("🌌 Feelings :")
+# st.header("")
 
-with st.spinner('The model is thinking very hard ...'):
+# with st.spinner('The model is thinking very hard ...'):
     
-    sequence_to_classify = text
+#     sequence_to_classify = text
 
-    candidate_labels = [
-        '👏 Admiration',
-        '🥰 Adoration',
-        '🦢 Aesthetic Appreciation',
-        '🎢 Amusement',
-        '😡 Anger',
-        '😟 Anxiety',
-        '😬 Awkwardness',
-        '🥱 Boredom',
-        '🌬️ Calmness',
-        '😵 Confusion',
-        '🤤 Craving',
-        '🤢 Disgust',
-        '😧 Empathetic pain',
-        '✨ Entrancement',
-        '🤩 Excitement',
-        '😨 Fear',
-        '😱 Horror',
-        '🛎️ Interest',
-        '😃 Joy',
-        '📼 Nostalgia',
-        '😌 Relief',
-        '🌹 Romance',
-        '😥 Sadness',
-        '😊 Satisfaction',
-        '😲 Surprise',
-    ]
+#     candidate_labels = [
+#         '👏 Admiration',
+#         '🥰 Adoration',
+#         '🦢 Aesthetic Appreciation',
+#         '🎢 Amusement',
+#         '😡 Anger',
+#         '😟 Anxiety',
+#         '😬 Awkwardness',
+#         '🥱 Boredom',
+#         '🌬️ Calmness',
+#         '😵 Confusion',
+#         '🤤 Craving',
+#         '🤢 Disgust',
+#         '😧 Empathetic pain',
+#         '✨ Entrancement',
+#         '🤩 Excitement',
+#         '😨 Fear',
+#         '😱 Horror',
+#         '🛎️ Interest',
+#         '😃 Joy',
+#         '📼 Nostalgia',
+#         '😌 Relief',
+#         '🌹 Romance',
+#         '😥 Sadness',
+#         '😊 Satisfaction',
+#         '😲 Surprise',
+#     ]
     
-    answer = classifier(sequence_to_classify, candidate_labels, multi_class=True)
+#     answer = classifier(sequence_to_classify, candidate_labels, multi_class=True)
 
-    label_probability_dict = {}
+#     label_probability_dict = {}
 
-    for i in range(len(answer['labels'])):
-        label_probability_dict[answer['labels'][i]] = answer['scores'][i]
+#     for i in range(len(answer['labels'])):
+#         label_probability_dict[answer['labels'][i]] = answer['scores'][i]
 
-    label_score_to_show = {k: v for k, v in label_probability_dict.items() if v > 0.3 }
-    # label_score_to_show = {k: str(np.floor(10000*float(v))/100.0 ) + '%' for k, v in label_probability_dict.items() if v > 0.3 }
+#     label_score_to_show = {k: v for k, v in label_probability_dict.items() if v > 0.3 }
+#     # label_score_to_show = {k: str(np.floor(10000*float(v))/100.0 ) + '%' for k, v in label_probability_dict.items() if v > 0.3 }
 
-label_score_to_show
+# label_score_to_show
 
-st.markdown("P.S: The text wanted to tell you 'thank you for understanding me 😊'")
+
+# st.markdown("P.S: The text wanted to tell you 'thank you for understanding me 😊'")
