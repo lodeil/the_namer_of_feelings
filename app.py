@@ -19,20 +19,19 @@ from transformers import pipeline
 # bug
 # classifier = pipeline("zero-shot-classification",model="MoritzLaurer/mDeBERTa-v3-base-mnli-xnli")
 # classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-deberta-v3-xsmall")
-
+# work
 classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-distilroberta-base")
-### classifier = pipeline("zero-shot-classification",model="tals/albert-xlarge-vitaminc-mnli")
-# classifier = pipeline("zero-shot-classification",model="finiteautomata/beto-sentiment-analysis")
-# classifier = pipeline("zero-shot-classification",model="MoritzLaurer/mDeBERTa-v3-base-mnli-xnli")
-
-
+# saturate
+# classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-roberta-base")
+# classifier = pipeline("zero-shot-classification",model="cardiffnlp/twitter-roberta-base-sentiment")
+# diffuse
+classifier = pipeline("zero-shot-classification",model="xlm-roberta-base")
+# to be tested 
 # classifier = pipeline("zero-shot-classification",model="valhalla/distilbart-mnli-12-1")
 # classifier = pipeline("zero-shot-classification",model="Narsil/deberta-large-mnli-zero-cls")
-
-# xlm-roberta-base
-# The `multi_class` argument has been deprecated and renamed to `multi_label`. `multi_class` will be removed in a future 
-# version of Transformers.
-
+# classifier = pipeline("zero-shot-classification",model="tals/albert-xlarge-vitaminc-mnli")
+# classifier = pipeline("zero-shot-classification",model="finiteautomata/beto-sentiment-analysis")
+# classifier = pipeline("zero-shot-classification",model="MoritzLaurer/mDeBERTa-v3-base-mnli-xnli")
 
 st.set_page_config(
     page_title="The Name of the feelings",
@@ -47,9 +46,9 @@ with st.expander("ℹ️ - Information on this app", expanded=True):
 
     st.write(
         """     
--   The *The Name of the feelings* is an app that allow you to extract the feelings in a text       
+-   The *The Name of the feelings* is an app that allow you to extract the feelings from a text       
 -   It build to be easy to use with nominal performance 
--   ⚠️ the model wasn't audited , it can and probably will exhibit harmfull behavior for some data cases
+-   ⚠️ the model wasn't audited , it can - and probably will - exhibit harmfull behavior for some data cases
 	    """
     )
 
