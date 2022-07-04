@@ -25,7 +25,7 @@ classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-distil
 # classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-roberta-base")
 # classifier = pipeline("zero-shot-classification",model="cardiffnlp/twitter-roberta-base-sentiment")
 # diffuse
-classifier = pipeline("zero-shot-classification",model="xlm-roberta-base")
+# classifier = pipeline("zero-shot-classification",model="xlm-roberta-base")
 # to be tested 
 # classifier = pipeline("zero-shot-classification",model="valhalla/distilbart-mnli-12-1")
 # classifier = pipeline("zero-shot-classification",model="Narsil/deberta-large-mnli-zero-cls")
