@@ -35,11 +35,11 @@ classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-distil
 
 
 st.set_page_config(
-    page_title="The Namer of feelings",
+    page_title="The Name of the feelings",
     page_icon="🔵",
 )
 
-st.title("🔵 The Namer of feelings ")
+st.title("🔵 The Name of the feelings")
 st.header("")
 
 
@@ -47,7 +47,7 @@ with st.expander("ℹ️ - Information on this app", expanded=True):
 
     st.write(
         """     
--   The *The Namer of feelings* is an app that allow you to extract the feelings in a text       
+-   The *The Name of the feelings* is an app that allow you to extract the feelings in a text       
 -   It build to be easy to use with nominal performance 
 -   ⚠️ the model wasn't audited , it can and probably will exhibit harmfull behavior for some data cases
 	    """
