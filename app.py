@@ -68,7 +68,6 @@ with st.spinner('The model is thinking very hard ...'):
         '🎢 Amusement',
         '😡 Anger',
         '😟 Anxiety',
-        '😮 Awe',
         '😬 Awkwardness',
         '🥱 Boredom',
         '🌬️ Calmness',
@@ -87,7 +86,6 @@ with st.spinner('The model is thinking very hard ...'):
         '🌹 Romance',
         '😥 Sadness',
         '😊 Satisfaction',
-        '⚧ Sexual desire',
         '😲 Surprise',
     ]
     
@@ -98,7 +96,8 @@ with st.spinner('The model is thinking very hard ...'):
     for i in range(len(answer['labels'])):
         label_probability_dict[answer['labels'][i]] = answer['scores'][i]
 
-    label_score_to_show = {k: str(np.floor(10000*float(v))/100.0 ) + '%' for k, v in label_probability_dict.items() if v > 0.3 }
+    label_score_to_show = {k: v for k, v in label_probability_dict.items() if v > 0.3 }
+    # label_score_to_show = {k: str(np.floor(10000*float(v))/100.0 ) + '%' for k, v in label_probability_dict.items() if v > 0.3 }
 
 label_score_to_show
 
