@@ -30,7 +30,8 @@ classifier = pipeline("zero-shot-classification",model="cross-encoder/nli-distil
 # classifier = pipeline("zero-shot-classification",model="Narsil/deberta-large-mnli-zero-cls")
 
 # xlm-roberta-base
-
+# The `multi_class` argument has been deprecated and renamed to `multi_label`. `multi_class` will be removed in a future 
+# version of Transformers.
 
 
 st.set_page_config(
