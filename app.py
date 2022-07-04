@@ -9,7 +9,7 @@ from transformers import pipeline
 # Config :
 # To launch : streamlit run app.py
 
-# classifier = pipeline("zero-shot-classification",model="facebook/bart-large-mnli")
+classifier = pipeline("zero-shot-classification",model="facebook/bart-large-mnli")
 
 st.set_page_config(
     page_title="The Namer of feelings",
