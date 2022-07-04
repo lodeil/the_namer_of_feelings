@@ -20,35 +20,35 @@ st.title("🔵 The Namer of feelings ")
 st.header("")
 
 
-with st.expander("ℹ️ - Information on this app", expanded=True):
+# with st.expander("ℹ️ - Information on this app", expanded=True):
 
-    st.write(
-        """     
--   The *The Namer of feelings* is an app that allow you to extract the feelings in a text       
--   It build to be easy to use with nominal performance 
--   ⚠️ the model wasn't audited , it can and probably will exhibit harmfull behavior for some data cases
-	    """
-    )
+#     st.write(
+#         """     
+# -   The *The Namer of feelings* is an app that allow you to extract the feelings in a text       
+# -   It build to be easy to use with nominal performance 
+# -   ⚠️ the model wasn't audited , it can and probably will exhibit harmfull behavior for some data cases
+# 	    """
+#     )
 
-    st.markdown("")
+#     st.markdown("")
 
-st.title("🪐 Write your text ")
-st.header("")
+# st.title("🪐 Write your text ")
+# st.header("")
 
-with st.form(key="text_form"):
+# with st.form(key="text_form"):
 
-    c29, c30, c31 = st.columns([0.08, 6, 0.18])
+#     c29, c30, c31 = st.columns([0.08, 6, 0.18])
 
-    with c30:
+#     with c30:
 
-        text = st.text_area(
-            'Write or past your text', 
-            "And suddenly the memory came to me. This taste was that of the little piece of madeleine that on Sunday mornings at Combray (because that day I didn't go out before mass time), when I went to say hello to her in her room, my Aunt Léonie offered it to me after having dipped it in her infusion of tea or lime blossom. The sight of the little madeleine had reminded me of nothing before I had tasted it; perhaps because, having often seen them since, without eating them, on the shelves of pastry chefs, their image had left those days of Combray to be linked to other more recent ones; perhaps because of those memories so long abandoned [...] - Proust"
-        ,
-        height=300
-        )
+#         text = st.text_area(
+#             'Write or past your text', 
+#             "And suddenly the memory came to me. This taste was that of the little piece of madeleine that on Sunday mornings at Combray (because that day I didn't go out before mass time), when I went to say hello to her in her room, my Aunt Léonie offered it to me after having dipped it in her infusion of tea or lime blossom. The sight of the little madeleine had reminded me of nothing before I had tasted it; perhaps because, having often seen them since, without eating them, on the shelves of pastry chefs, their image had left those days of Combray to be linked to other more recent ones; perhaps because of those memories so long abandoned [...] - Proust"
+#         ,
+#         height=300
+#         )
 
-        submit_button = st.form_submit_button(label="💡 Get me the feelings !")
+#         submit_button = st.form_submit_button(label="💡 Get me the feelings !")
 
 
 # if not submit_button:
