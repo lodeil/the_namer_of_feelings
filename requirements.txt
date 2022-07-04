@@ -4,5 +4,5 @@ Pillow==9.2.0
 streamlit==1.10.0
 tokenizers==0.12.1
 transformers==4.20.1
-urllib3==1.26.9
+# urllib3==1.26.9
 torch==1.12.0
