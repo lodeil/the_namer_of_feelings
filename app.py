@@ -49,7 +49,10 @@ with st.expander("ℹ️ - Information on this app", expanded=True):
 -   The *The Name of the feelings* is an app that allow you to extract the feelings from a text       
 -   It build to be easy to use with nominal performance 
 -   ⚠️ the model wasn't audited , it can - and probably will - exhibit harmfull behavior for some data cases
-	    """
+-   📼 The cloud platform where the project is hosted allow only a limited amount of memory used :  
+	the model used are small and therefor weaker then the full scale algorithms
+	the app may crash with an memory overflow error
+	    """	  
     )
 
     st.markdown("")
@@ -65,7 +68,7 @@ with st.form(key="text_form"):
 
         text = st.text_area(
             'Write or past your text', 
-            "And suddenly the memory came to me. This taste was that of the little piece of madeleine that on Sunday mornings at Combray (because that day I didn't go out before mass time), when I went to say hello to her in her room, my Aunt Léonie offered it to me after having dipped it in her infusion of tea or lime blossom. The sight of the little madeleine had reminded me of nothing before I had tasted it; perhaps because, having often seen them since, without eating them, on the shelves of pastry chefs, their image had left those days of Combray to be linked to other more recent ones; perhaps because of those memories so long abandoned [...] - Proust"
+            "And suddenly the memory came to me. This taste was that of the little piece of madeleine that on Sunday mornings at Combray [...] - Proust"
         ,
         height=300
         )
