@@ -49,7 +49,7 @@ with st.expander("ℹ️ - Information on this app", expanded=True):
 -   The *The Name of the feelings* is an app that allow you to extract the feelings from a text       
 -   It build to be easy to use with nominal performance 
 -   ⚠️ The model wasn't audited , it can - and probably will - exhibit harmfull behavior for some data cases
--   ⚠️ The cloud platform where the project is hosted allow a limited amount memory use, therefor the app may crash
+-   ⚠️ The cloud platform where the project is hosted allow a limited amount memory use, there for the app may return a memory overflow error
 -   ⚠️ The model used are small due to cloud resource constraint and therefor weaker than the full scale algorithms
 	    """	  
     )
